@@ -6,7 +6,7 @@ document.getElementById('akan-form').addEventListener('submit', function(event) 
     const day = parseInt(document.getElementById('day').value);
     const month = parseInt(document.getElementById('month').value);
     const year = parseInt(document.getElementById('year').value);
-    const gender = parseInt(document.getElementById('gender').value);
+    const gender = document.getElementById('gender').value;
 
     //step3 validate input
 
@@ -33,7 +33,7 @@ document.getElementById('akan-form').addEventListener('submit', function(event) 
     const CC = Math.floor(year/100); //century part
     const YY = year % 100; //year part with century
 
-    //step5: calculate thr day of the week using the formula
+    //step5: calculate the day of the week using the formula
     const dayofweek = Math.floor(
         (((CC/4)-(2*CC)-1)+((5*YY/4))+((26*(month+1)/10))+day) % 7
     );
