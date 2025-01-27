@@ -11,7 +11,7 @@ document.getElementById('akan-form').addEventListener('submit', function(event) 
     //step3 validate input
 
     if (day<= 0 || day > 31){
-        alert('Invalid day! please enter a month between 1 and 12');
+        alert('Invalid day! please enter a month between 1 and 31');
         return;
     }
 
