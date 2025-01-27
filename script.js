@@ -10,10 +10,14 @@ document.getElementById('akan-form').addEventListener('submit', function(event) 
 
     //step3 validate input
 
-    if (day<= 0 || day > 31){
+    if (day <= 0 || day > 31){
         alert('Invalid day! please enter a month between 1 and 31');
         return;
     }
+
+    if (month <= 0 || month > 12){
+        alert('Invalid day! Please enter a month between 1 and 12');
+        return;
 
     if (year <=0){
         alert('invalid year! Please enter a positive year.');
@@ -41,7 +45,7 @@ document.getElementById('akan-form').addEventListener('submit', function(event) 
     let akaName;
     if (gender === 'male'){
         akaName = maleNames[dayofweek];
-    } else if (gender === 'feamle'){
+    } else if (gender === 'female'){
         akaName = femaleNames[dayofweek];
     }
 
